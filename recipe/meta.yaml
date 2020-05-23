@@ -1,4 +1,4 @@
-{% set version = "3.0-3" %}
+{% set version = "3.0-4" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/carData_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/carData/carData_{{ version }}.tar.gz
-  sha256: 986b84bdd289159eead8b050ea82600a4f77bf0bbe0293a7c7b25d607ff7e231
+  sha256: cda6f5e3efc1d955a4a0625e9c33f90d49f5455840e88b3bd757129b86044724
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -34,13 +34,11 @@ test:
     - "\"%R%\" -e \"library('carData')\""  # [win]
 
 about:
-  home: https://r-forge.r-project.org/projects/car/, https://CRAN.R-project.org/package=carData,
-    http://socserv.socsci.mcmaster.ca/jfox/Books/Companion/index.html
+  home: https://r-forge.r-project.org/projects/car/, https://CRAN.R-project.org/package=carData, http://socserv.socsci.mcmaster.ca/jfox/Books/Companion/index.html
   license: GPL (>= 2)
-  summary: ' Datasets to Accompany J. Fox and S. Weisberg,  An R Companion to Applied Regression,
-    Third Edition, Sage (forthcoming).'
+  summary: ' Datasets to Accompany J. Fox and S. Weisberg,  An R Companion to Applied Regression, Third Edition, Sage (forthcoming).'
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
