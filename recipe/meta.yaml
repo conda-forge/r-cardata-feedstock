@@ -1,4 +1,4 @@
-{% set version = "3.0-4" %}
+{% set version = "3.0-5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/carData_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/carData/carData_{{ version }}.tar.gz
-  sha256: cda6f5e3efc1d955a4a0625e9c33f90d49f5455840e88b3bd757129b86044724
+  sha256: 02e77159b33e3afb8cd9cfab11cf5a996a93175f924b07d991ce44bc6e16451a
 
 build:
   merge_build_host: true  # [win]
