@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-cardata-feeds
 
 Home: https://r-forge.r-project.org/projects/car/, https://CRAN.R-project.org/package=carData, http://socserv.socsci.mcmaster.ca/jfox/Books/Companion/index.html
 
-Package license: GPL (>= 2)
+Package license: GPL-2.0-or-later
 
 Summary:  Datasets to Accompany J. Fox and S. Weisberg,  An R Companion to Applied Regression, Third Edition, Sage (forthcoming).
 
